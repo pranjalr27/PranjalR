@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background: black;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header Section */
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the entire section */
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: rgba(76, 76, 76, 0.416);
+    width: 100%;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text {
+    text-align: left;
+    font-family: 'Poppins', sans-serif; /* Clean & modern font */
+}
+
+/* Small Intro Text */
+.header-text p {
+    font-size: 1.0rem;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 1px;
+    margin-top: 10%;
+}
+
+/* Main Heading */
+.header-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+}
+
+/* Highlighted Name */
+.header-text .highlight {
+    color: #F4A300; /* Adjust to match reference color */
+    font-weight: bold;
+}
+
+/* Subtext (Profession) */
+.header-text .subtext {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:white;
+    margin-top: 10px;
+}
+/*.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+
+}
+/*--------about-------*/
+#about{
+    padding-bottom: 10px;
+    color: floralwhite;
+    margin-bottom: 40px;
+    margin-top: 80px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 85%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: burlywood;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*-------------offerings------*/
+#whatioffer{
+    padding: 10px 0;
+    margin-top: 10px;
+}
+.offerings{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+} 
+.offerings div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: backgroud 0.5s, transform 0.5s;
+}
+.offerings div img{
+    width: 70px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.offerings div h2{
+    color: burlywood;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.offerings p{
+    color: floralwhite;
+    position: relative;
+    padding-left: 10px;
+    margin: 3px 0;
+}
+.offerings div p::before{
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+.offerings :hover{
+    background: #ababab5f;
+    transform: translateY(-10px);
+}
+/*------------------portfolio-----------*/
+#portfolio {
+    text-align: center;
+    padding: 50px;
+    background: black;
+    color: white;
+}
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    padding-top: 20px;
+    justify-items: center;
+}
+.work {
+    background: rgb(51, 51, 51);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-sizing: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.work:hover {
+    background: #ababab38;
+    transform: scale(1.1);
+}
+.work h3 {
+    color: burlywood;
+    margin-bottom: 10px;
+}
+.work p,
+.work span{
+    font-size: 14px;
+}
+.learn-more-btn {
+    background: #4da6ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    display: block;
+}
+.learn-more-btn:hover {
+    background: #3380cc;
+}
+.hidden-content {
+    display: none;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.show {
+    display: block;
+}
+/*---------contact-------------*/
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 80%; /* Limit the total width to prevent excessive spacing */
+    margin: 0 auto; /* Center the content */
+    gap: 50px; /* Ensures proper spacing */
+}
+.contact-left{
+    /*flex-basis: 35%;*/
+    flex: 1;
+    min-width: 300px; 
+}
+.contact-right{
+    /*flex-basis: 20%;*/
+    flex: 1;
+    min-width: 500px; /* Prevents the form from getting too small */
+    max-width: 700px; /* Limits form width */
+}
+.contact-left p{
+    margin-top: 20px;
+}
+.contact-left p i{
+    color: #404cf09f;
+  
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #404cf09f;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.social-icons a:hover{
+    color: #ababab;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline block;
+    background: #4da6ff;
+    color: white;
+    border: none;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 12px 24px; 
+    text-align: center; 
+    font-size: 16px; 
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+.contact-right form{
+    width: 100%;
+    margin-top: 40px;
+
+}
+form input, form textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #262626;
+    padding: 10px;
+    margin-top: 10px;
+    color: #ff004f;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 11px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+nav .fa-solid{
+    display: none;
+}
+/*-----------small screen----*/
+@media screen and (max-width: 1024px) {
+    nav {
+        margin-bottom: 50px; /* Adjust the gap as needed */
+    }
+    .header-text {
+        padding-top: 30px; /* Adjust the space */
+    }
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .contact-left, .contact-right {
+        min-width: 100%;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 20px;
+    }
+    nav ul{
+        background: #6684a3;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 20px;
+    }
+    
+}
+#msg{
+    color: rgb(4, 138, 39);
+    margin-top: -40px;
+    display: block;
+}
